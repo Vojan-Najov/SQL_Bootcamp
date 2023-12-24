@@ -1,22 +1,24 @@
 #!/bin/bash
 
+cd $HOME
+
 wget https://ftp.postgresql.org/pub/source/v16.0/postgresql-16.0.tar.gz
 
-tar xzf /Users/ccartman/postgresql-16.0.tar.gz
+tar xzf $HOME/postgresql-16.0.tar.gz
 
-cd /Users/ccartman/postgresql-16.0
+cd $HOME/postgresql-16.0
 
-./configure --prefix=/Users/ccartman//pgsql16 --with-pgport=5555
+./configure --prefix=$HOME/pgsql16 --with-pgport=5555
 
 make && make install
 
 cd contrib
 make && make install
 
-mkdir /Users/ccartman/pgsql16/data
+mkdir $HOME/pgsql16/data
 
-export PGDATA=/Users/ccartman/pgsql16/data
-export PATH=/Users/ccartman/pgsql16/bin:$PATH
+export PGDATA=$HOME/pgsql16/data
+export PATH=$HOME/pgsql16/bin:$PATH
 
-initdb -U postgres -k -D /Users/ccartman/pgsql16/data
+initdb -U postgres -k -D $HOME/pgsql16/data
 
