@@ -8,7 +8,7 @@
         ) AS person_name
     FROM person_order AS po
 )
-INTERSECT
+INTERSECT ALL
 (
     SELECT
         visit_date AS action_date,
@@ -29,7 +29,7 @@ ORDER BY action_date ASC, person_name DESC;
     FROM person_order AS po
     INNER JOIN person AS p ON po.person_id = p.id
 )
-INTERSECT
+INTERSECT ALL
 (
     SELECT
         pv.visit_date AS action_date,
