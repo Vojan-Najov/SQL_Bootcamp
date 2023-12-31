@@ -23,13 +23,13 @@ ordered_by_women AS (
 
 (
     SELECT pizzeria_name FROM ordered_by_women
-    EXCEPT DISTINCT
+    EXCEPT
     SELECT pizzeria_name FROM ordered_by_men
 )
 UNION DISTINCT
 (
     SELECT pizzeria_name FROM ordered_by_men
-    EXCEPT DISTINCT
+    EXCEPT
     SELECT pizzeria_name FROM ordered_by_women
 )
 ORDER BY pizzeria_name ASC;
