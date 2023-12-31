@@ -30,4 +30,4 @@ UNION ALL
     EXCEPT ALL
     SELECT pizzeria_name FROM visited_by_women
 )
-ORDER BY pizzeria_name ASC
+ORDER BY pizzeria_name ASC;
