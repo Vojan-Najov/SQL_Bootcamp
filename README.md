@@ -11,3 +11,6 @@ Today you will see how to get needed data based on different structures JOINs.
 
 - [Day 03](Day03) \
 Today you will see how to change data based on DML language.
+
+- [Day 04](Day04) \
+Today you will see how to use a virtual view and physical snapshot of data.
