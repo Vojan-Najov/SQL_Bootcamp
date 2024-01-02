@@ -10,4 +10,5 @@ INNER JOIN menu
 WHERE
     person.name = 'Dmitriy'
     AND pv.visit_date = '2022-01-08'
-    AND menu.price < 800;
+    AND menu.price < 800
+ORDER BY pizzeria_name ASC;
