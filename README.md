@@ -14,3 +14,6 @@ Today you will see how to change data based on DML language.
 
 - [Day 04](Day04) \
 Today you will see how to use a virtual view and physical snapshot of data.
+
+- [Team00](Team00) \
+Today you will implementing a quick solution on SQL to achieve results of Traveling Salesman Problem.
