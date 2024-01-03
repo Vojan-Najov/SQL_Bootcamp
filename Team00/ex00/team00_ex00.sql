@@ -57,4 +57,4 @@ SELECT
     tours.tour
 FROM tours
 WHERE tours.total_cost = (SELECT MIN(tours.total_cost) FROM tours)
-ORDER BY tours.tour ASC;
+ORDER BY tours.total_cost ASC, tours.tour ASC;
