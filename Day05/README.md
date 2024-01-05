@@ -172,7 +172,7 @@ Please create a better multicolumn B-Tree index with the name `idx_person_order_
     WHERE person_id = 8 AND menu_id = 19;
 
 
-The `EXPLAIN ANALYZE` command should return  the next pattern. Please be attention on "Index Only Scan" scanning!
+The `EXPLAIN ANALYZE` command should return  the next pattern. Please pay attention to "Index Only Scan" scanning!
 
     Index Only Scan using idx_person_order_multi on person_order ...
 
