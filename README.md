@@ -18,5 +18,8 @@
 - [Day 05](Day05) \
   Today you will see how and when to create database indexes.
 
+- [Day 06](Day06) \
+  Today you will see how to add a new business feature into our data model.
+
 - [Team00](Team00) \
   Today you will implementing a quick solution on SQL to achieve results of Traveling Salesman Problem.
