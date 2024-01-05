@@ -1,7 +1,5 @@
 CREATE INDEX idx_1 ON pizzeria (rating);
 
---DROP INDEX idx_1;
-
 EXPLAIN ANALYZE
 SELECT
     m.pizza_name AS pizza_name,
