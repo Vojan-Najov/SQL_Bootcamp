@@ -1,8 +1,6 @@
 CREATE INDEX idx_person_name ON person (upper(name));
 
-SET enable_seqscan TO off;
-
 EXPLAIN ANALYZE
-SELECT upper(person.name) AS person_name
+SELECT person.id AS person_id
 FROM person
-ORDER BY person_name;
+WHERE upper(person.name) = 'IRINA';
