@@ -1,6 +1,6 @@
-CREATE INDEX idx_person_order_multi ON person_order (person_id, menu_id);
-
-SET enable_seqscan TO off;
+CREATE INDEX idx_person_order_multi
+ON person_order (person_id, menu_id)
+INCLUDE (order_date);
 
 EXPLAIN ANALYZE
 SELECT
