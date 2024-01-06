@@ -21,5 +21,8 @@
 - [Day 06](Day06) \
   Today you will see how to add a new business feature into our data model.
 
+- [Day 07](Day07) \
+  Today you will see how to use specific OLAP constructions to get a “Value” from data.
+
 - [Team00](Team00) \
   Today you will implementing a quick solution on SQL to achieve results of Traveling Salesman Problem.
