@@ -18,7 +18,7 @@ WITH visits_and_orders AS (
 
 SELECT
     vo.name AS name,
-    COUNT(vo.name) AS total_count
+    COUNT(*) AS total_count
 FROM visits_and_orders AS vo
 GROUP BY vo.name
 ORDER BY total_count DESC, name ASC;
