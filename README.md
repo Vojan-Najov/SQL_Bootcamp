@@ -24,5 +24,8 @@
 - [Day 07](Day07) \
   Today you will see how to use specific OLAP constructions to get a “Value” from data.
 
+- [Day 08](Day08) \
+  Today you will see how database works with transactions and isolation levels.
+
 - [Team00](Team00) \
   Today you will implementing a quick solution on SQL to achieve results of Traveling Salesman Problem.
