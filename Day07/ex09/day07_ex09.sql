@@ -1,8 +1,8 @@
 SELECT
-    address,
-    formula,
-    average,
-    (formula > average)::TEXT AS comparison
+    temp.address,
+    temp.formula,
+    temp.average,
+    (temp.formula > temp.average)::TEXT AS comparison
 FROM (
     SELECT
         address,
@@ -12,5 +12,5 @@ FROM (
         ROUND(AVG(age), 2) AS average
     FROM person
     GROUP BY address
-)
-ORDER BY address;
+) AS temp
+ORDER BY temp.address;
