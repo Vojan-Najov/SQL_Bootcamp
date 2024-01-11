@@ -1,4 +1,4 @@
-INSERT INTO currency 
+INSERT INTO currency
 VALUES (100, 'EUR', 0.85, '2022-01-01 13:29');
 
 INSERT INTO currency
@@ -40,15 +40,17 @@ WITH currency_unique AS (
 )
 
 SELECT
-    COALESCE(u.name, 'not defined') AS name,
-    COALESCE(u.lastname, 'not defined') AS lastname,
+    coalesce(u.name, 'not defined') AS name,
+    coalesce(u.lastname, 'not defined') AS lastname,
     c.name AS currency_name,
-    b.money * COALESCE(calc_currency_before_ts(c.name, b.updated), calc_currency_after_ts(c.name, b.updated)) AS currency_in_usd
+    b.money
+    * coalesce(
+        calc_currency_before_ts(c.name, b.updated),
+        calc_currency_after_ts(c.name, b.updated)
+    ) AS currency_in_usd
 FROM balance AS b
 LEFT OUTER JOIN "user" AS u
     ON b.user_id = u.id
 INNER JOIN currency_unique AS c
     ON b.currency_id = c.id
 ORDER BY name DESC, lastname ASC, currency_name ASC;
-
-
