@@ -27,5 +27,11 @@
 - [Day 08](Day08) \
   Today you will see how database works with transactions and isolation levels.
 
-- [Team00](Team00) \
+- [Day 09](Day09) \
+  Today you will see how to create and use functional blocks in Databases.
+
+- [Team 00](Team00) \
   Today you will implementing a quick solution on SQL to achieve results of Traveling Salesman Problem.
+
+- [Team 01](Team01) \
+  Today you will know what DWH is and how to create a first ETL process.
