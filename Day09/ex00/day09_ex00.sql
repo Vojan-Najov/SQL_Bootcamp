@@ -15,16 +15,15 @@ CHECK (type_event IN ('I', 'U', 'D'));
 CREATE FUNCTION fnc_trg_person_insert_audit() RETURNS TRIGGER
 AS $person_insert_audit$
     BEGIN
-        IF (TG_OP = 'INSERT') THEN
-            INSERT INTO person_audit(created, type_event, row_id, name, age, gender, address)
-            VALUES (current_timestamp, 'I', NEW.id, NEW.name, NEW.age, NEW.gender, NEW.address);
-        END IF;
+        INSERT INTO person_audit(created, type_event, row_id, name, age, gender, address)
+        VALUES (current_timestamp, 'I', NEW.id, NEW.name, NEW.age, NEW.gender, NEW.address);
         
 	RETURN NULL;
     END;
 $person_insert_audit$ LANGUAGE plpgsql;
 
-CREATE TRIGGER trg_person_insert_audit AFTER INSERT ON person
+CREATE TRIGGER trg_person_insert_audit AFTER INSERT
+ON person
 FOR EACH ROW EXECUTE FUNCTION fnc_trg_person_insert_audit();
 
 INSERT INTO person (id, name, age, gender, address)
